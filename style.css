@@ -1,0 +1,16 @@
+.containerStatus {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    
+}
+
+.statusLightsOff {
+    background-color: lightgray;
+    border: 2px solid black;
+    height: 20px;
+    width: 20px;
+}
+
+.statusLightsOn {
+    background-color: yellow;
+}
