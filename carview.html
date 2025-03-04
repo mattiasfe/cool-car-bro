@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carview Local</title>
+    <style>
+        #controlButtons{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 100px;
+            justify-content: center;
+        }
+
+        .ctrlbtn {
+            font-size: larger;
+            margin: 10px;
+            width: 100px;
+            height: 40px;
+        }
+
+        #roadDisplay {
+            display: grid;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body onload = "updateView()">
+    <div id="app"></div>
+</body>
+</html>
+<script>
+    //m
+    let carPos = 0;
+    let FourObstPos;
+    let ThreeObstPos;
+    let TwoObstPos;
+    let OneObstPos;
+    let carImage = 'img/roadmid.png';
+    let isCarOnLeft = " ";
+    let isCarOnRight = " ";
+
+    //v
+    function updateView() {
+        document.getElementById('app').innerHTML = /*HTML*/ ` 
+        <div id='roadDisplay'>
+            <img src=${carImage}></div>
+            <div id='controlButtons'>
+                <button class='ctrlbtn' id='btnleft' onclick='moveLeft()' ${isCarOnLeft}>⬉</button>
+                <button class='ctrlbtn' id='btnforw' onclick='moveForw()'>⬆</button>
+                <button class='ctrlbtn' id='btnright' onclick='moveRight()' ${isCarOnRight}>⬈</button>
+                    </div>
+        `;
+    }
+    //c
+    
+    function moveLeft() {
+        carPos--;
+        nextTurn();
+    }
+
+    function moveForw() {
+        carPos = 0;
+        nextTurn();
+    }
+
+    function moveRight() {
+        carPos++;
+        nextTurn();
+    }
+
+    function nextTurn() {
+        //Håndterer alt av bevegelse som skjer når en tur er ferdig//
+
+        // Posisjon av bilen //
+        if (carPos == 0) {
+            carPos = 0;
+            carImage = 'img/roadmid.png';
+            isCarOnLeft = " ";
+            isCarOnRight = " ";
+            console.log('stayed mid');
+        }
+
+        if (carPos > 0) {
+            carImage = 'img/roadright.png';
+            isCarOnLeft = " ";
+            isCarOnRight = "disabled";
+            console.log('drove right');
+        } 
+        
+        if (carPos < 0) {
+            carImage = 'img/roadleft.png';
+            isCarOnLeft = "disabled";
+            isCarOnRight = " ";
+            console.log('drove left');
+        }
+
+        // Posisjon av hindringer //
+
+        // Posisjon av kompiser //
+
+        updateView();
+    }
+
+</script>
