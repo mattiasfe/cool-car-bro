@@ -7,8 +7,9 @@
 .statusLightsOff {
     background-color: lightgray;
     border: 2px solid black;
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
+    margin-left: 40px;
 }
 
 .statusLightsOn {
