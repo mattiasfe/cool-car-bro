@@ -1,6 +1,6 @@
 
 //View
-getStatusLvl()
+updateStatus()
 function updateStatus() {
     app.innerHTML = /*HTML*/ `
         <div class="containerStatus">
