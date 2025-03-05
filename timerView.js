@@ -26,5 +26,3 @@ function updateTheTimer() {
     document.querySelector('#timer').style.backgroundColor = `rgb(255, 10, 255)`
     document.querySelector('#timer').style.width = `${timerWidthValue * 10}px`;
 }
-
-updateMainView();
