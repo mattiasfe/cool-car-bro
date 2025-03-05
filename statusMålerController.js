@@ -11,11 +11,12 @@ function getStatusLvl() {
     return coolScoreHTML;
 }
 
-function loosStatusPoints() {
+function looseGainStatusPoints() {
     if (wrongAnswer > 0) {
         coolScoreNumber--;
     }
     else{
         coolScoreNumber++;
     }
+    return coolScoreNumber;
 }
