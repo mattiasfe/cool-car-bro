@@ -8,28 +8,43 @@
         #controlButtons{
             display: grid;
             grid-template-columns: auto auto auto;
-            grid-column-gap: 100px;
+            grid-column-gap: 20px;
             justify-content: center;
         }
 
         .ctrlbtn {
             font-size: larger;
             margin: 10px;
-            width: 100px;
+            width: 75px;
             height: 40px;
+        }
+        
+        body {
+            display: grid;
+            justify-content: center;
+        }
+
+        #background {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            background-color: green;
+            width: 800px;
         }
 
         #roadDisplay {
             display: grid;
+            grid-template-columns: auto auto auto;
             justify-content: center;
         }
 
         .roadseg {
             background-color: gray;
             width: 100px;
-            height: 300px;
+            height: 200px;
             border: 2px black solid;
             border-bottom: 2px rgb(70, 70, 70) solid;
+            border-top: 2px rgb(70, 70, 70) solid;
         }
     </style>
 </head>
@@ -52,15 +67,19 @@
 
     //v
     function updateCarView() {
-        document.getElementById('app').innerHTML = /*HTML*/ ` 
+        document.getElementById('app').innerHTML = /*HTML*/ `
+        <div id='background'>
         <div id='roadDisplay'>
-            <img src=${carImage}></div>
+            
+            
+            <div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div>
+            <div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div>
+            <div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div>
+            <div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div>
+            <div class='roadseg'id='L5'></div><div class='roadseg'id='M5'></div><div class='roadseg'id='R5'></div>
+            </div></div>
+
             <div id='controlButtons'>
-                <div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div>
-                <div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div>
-                <div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div>
-                <div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div>
-                <div class='roadseg'id='L5'></div><div class='roadseg'id='M5'></div><div class='roadseg'id='R5'></div>
                 <button class='ctrlbtn' id='btnleft' onclick='moveLeft()' ${isCarOnLeft}>⬉</button>
                 <button class='ctrlbtn' id='btnforw' onclick='moveForw()'>⬆</button>
                 <button class='ctrlbtn' id='btnright' onclick='moveRight()' ${isCarOnRight}>⬈</button>
@@ -124,6 +143,7 @@
 
     function obstacleRng() {
         return Math.floor(Math.random() * (1 - -2) + -1);
+        //<img src=${carImage}>//
     }
 
 </script>
