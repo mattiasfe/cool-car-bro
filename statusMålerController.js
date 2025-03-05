@@ -25,7 +25,7 @@ function looseGainStatusPoints() {
 function printStatusText() {
     let text = '';
     if(coolScoreNumber > 0) {
-        for(let i = 0; i < coolScoreNumber; i++){
+       
             if(coolScoreNumber == 1) {
                 text = 'Hobo 🚲';
             }
@@ -44,7 +44,7 @@ function printStatusText() {
             else if (coolScoreNumber == 6) {
                 text = '💰Legend 🏎';
             }
-        }
+        
     }
     return text;
 }
