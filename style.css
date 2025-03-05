@@ -19,3 +19,11 @@
     width: 50px;
     margin-left: 40px;
 }
+
+#statusTextDisplay {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    font-family: cursive;
+
+}

@@ -4,6 +4,7 @@ const app = document.getElementById('app');
 let wantToShowDialog = false;
 
 let coolScoreHTML = '';
-let coolScoreNumber = 1;
+let coolScoreNumber = 6;
 let statusbar = coolScoreNumber;
-let wrongAnswer = '';
+let isAnswerCorrect = '';
+let statusText = '';
