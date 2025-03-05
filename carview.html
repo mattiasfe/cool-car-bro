@@ -39,6 +39,9 @@
         }
 
         .roadseg {
+            display: grid;
+            justify-content: center;
+            align-content: center;
             background-color: gray;
             width: 100px;
             height: 200px;
@@ -54,6 +57,11 @@
             border-bottom: 2px green solid;
             border-top: 2px green solid;
         }
+
+        #carimage {
+            width:80px;
+            height:180px;
+        }
     </style>
 </head>
 <body onload = "updateCarView()">
@@ -67,7 +75,9 @@
     let RowThreePos;
     let RowTwoPos;
     let RowOnePos;
-    let carImage = 'img/roadmid.png';
+    let carImageL = false;
+    let carImageM = true;
+    let carImageR = false;
     let isCarOnLeft = " ";
     let isCarOnRight = " ";
     let turns = 0;
@@ -84,7 +94,7 @@
             <div class ='backgroundseg' id = 'BL2'></div><div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div><div class ='backgroundseg' id = 'BR2'></div>
             <div class ='backgroundseg' id = 'BL3'></div><div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div><div class ='backgroundseg' id = 'BR3'></div>
             <div class ='backgroundseg' id = 'BL4'></div><div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div><div class ='backgroundseg' id = 'BR4'></div>
-            <div class ='backgroundseg' id = 'BL5'></div><div class='roadseg'id='L5'></div><div class='roadseg'id='M5'></div><div class='roadseg'id='R5'></div><div class ='backgroundseg' id = 'BR5'></div>
+            <div class ='backgroundseg' id = 'BL5'></div><div class='roadseg'id='L5'>${carImageL ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='M5'>${carImageM ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='R5'>${carImageR ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class ='backgroundseg' id = 'BR5'></div>
             </div></div>
 
             <div id='controlButtons'>
@@ -116,21 +126,27 @@
         // Posisjon av bilen //
         if (carPos == 0) {
             carPos = 0;
-            carImage = 'img/roadmid.png';
+            carImageL = false;
+            carImageM = true;
+            carImageR = false;
             isCarOnLeft = " ";
             isCarOnRight = " ";
             console.log('stayed mid');
         }
 
         if (carPos > 0) {
-            carImage = 'img/roadright.png';
+            carImageL = false;
+            carImageM = false;
+            carImageR = true;
             isCarOnLeft = " ";
             isCarOnRight = "disabled";
             console.log('drove right');
         } 
         
         if (carPos < 0) {
-            carImage = 'img/roadleft.png';
+            carImageL = true;
+            carImageM = false;
+            carImageR = false;
             isCarOnLeft = "disabled";
             isCarOnRight = " ";
             console.log('drove left');
