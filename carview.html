@@ -12,6 +12,40 @@
             justify-content: center;
         }
 
+        #miscButtons {
+            display: grid;
+            grid-template-columns: auto;
+            grid-column-gap: 20px;
+            justify-content: center;
+        }
+
+        #tootbtn {
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(94, 94, 94);
+        }
+        
+
+        #tootbtn:hover {
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(138, 138, 138);
+        }
+
+        #tootbtn {
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(94, 94, 94);
+        }
+
+        #hornimg {
+            width: 50px;
+            height: 50px;
+        }
+
         .ctrlbtn {
             font-size: larger;
             margin: 10px;
@@ -44,10 +78,18 @@
             align-content: center;
             background-color: gray;
             width: 100px;
-            height: 200px;
-            border: 2px black solid;
-            border-bottom: 2px rgb(70, 70, 70) solid;
-            border-top: 2px rgb(70, 70, 70) solid;
+            height: 202px;
+            border-bottom: 1.5px rgba(70, 70, 70, 0.5) dashed;
+            border-top: 1.5px rgba(70, 70, 70, 0.5) dashed;
+        }
+
+        #L1,#L2,#L3,#L4,#L5 {
+            border-left: 2px black solid;
+            border-right: 2px white dashed;
+        }
+        #R1,#R2,#R3,#R4,#R5 {
+            border-right: 2px black solid;
+            border-left: 2px white dashed;
         }
 
         .backgroundseg {
@@ -56,9 +98,9 @@
             align-content: center;
             background-color: green;
             width: 200px;
-            height: 200px;
-            border-bottom: 2px green solid;
-            border-top: 2px green solid;
+            height: 202px;
+            border-bottom: 1.5px green solid;
+            border-top: 1.5px green solid;
         }
 
         #treeimage {
@@ -124,7 +166,9 @@
                 <button class='ctrlbtn' id='btnleft' onclick='moveLeft()' ${isCarOnLeft}>⬉</button>
                 <button class='ctrlbtn' id='btnforw' onclick='moveForw()'>⬆</button>
                 <button class='ctrlbtn' id='btnright' onclick='moveRight()' ${isCarOnRight}>⬈</button>
-                    </div>
+                </div>
+                <div id='miscButtons'><button id='tootbtn'><img id="hornimg" src="img/horn.png"></button></div>
+                
         `;
     }
     //c
@@ -250,12 +294,10 @@
 
     function obstacleRng() {
         return Math.floor(Math.random() * (1 - -2) + -1);
-        //<img src=${carImage}>//
     }
 
-    function decorRng() {
+/*     function decorRng() {
         return Math.floor(Math.random() * 2);
-        //<img src=${carImage}>//
-    }
+    } */
 
 </script>
