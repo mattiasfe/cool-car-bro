@@ -1,7 +1,6 @@
-function updateView() {
+function updateMainView() {
     let html = `
-    ${updateStatus()}
-     <div id="timer"></div>
+    ${wantToStartTimer ? `${renderTimerView()}` : ''}
     `
     document.getElementById('app').innerHTML = html;
 }
