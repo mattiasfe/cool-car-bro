@@ -26,22 +26,22 @@ function printStatusText() {
     if(coolScoreNumber > 0) {
         for(let i = 0; i < coolScoreNumber; i++){
             if(coolScoreNumber == 1) {
-                text = 'Hobo';
+                text = 'Hobo 🚲';
             }
             else if (coolScoreNumber == 2) {
-                text = 'Looser';
+                text = 'Looser 🛺';
             }
             else if (coolScoreNumber == 3) {
-                text = 'The Normal Guy';
+                text = 'The Normal Guy 🚙';
             }
             else if (coolScoreNumber == 4) {
-                text = 'Cool Guy';
+                text = 'Cool Guy 🚗';
             }
             else if (coolScoreNumber == 5) {
-                text = 'Millionaire';
+                text = 'Money Man 🏎️';
             }
             else if (coolScoreNumber == 6) {
-                text = 'Filthy Rich';
+                text = 'Filthy Rich 🏎';
             }
         }
     }
