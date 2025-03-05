@@ -51,11 +51,19 @@
         }
 
         .backgroundseg {
+            display: grid;
+            justify-content: center;
+            align-content: center;
             background-color: green;
             width: 200px;
             height: 200px;
             border-bottom: 2px green solid;
             border-top: 2px green solid;
+        }
+
+        #treeimage {
+            width: 100px;
+            height: 180px;
         }
 
         #carimage {
@@ -71,8 +79,22 @@
 <script>
     //m
     let carPos = 0;
-    let decorLeftPos = 0;
-    let decorRightPos = 0;
+
+    //decor left pos//
+/*     let dlp1 = true;
+    let dlp2 = false;
+    let dlp3 = false;
+    let dlp4 = true;
+    let dlp5 = false; */
+    //decor right pos//
+/*     let drp1 = false;
+    let drp2 = true;
+    let drp3 = true;
+    let drp4 = false;
+    let drp5 = true; */
+    //
+    let decorLeftPos = 1;
+    let decorRightPos = 4;
     let rowFourPos;
     let rowThreePos;
     let rowTwoPos;
@@ -91,11 +113,11 @@
         <div id='background'>
         <div id='roadDisplay'>
         
-            <div class ='backgroundseg' id = 'BL1'>${decorLeftPos == 1 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div><div class ='backgroundseg' id = 'BR1'>${decorRightPos == 1 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
-            <div class ='backgroundseg' id = 'BL2'>${decorLeftPos == 2 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div><div class ='backgroundseg' id = 'BR2'>${decorRightPos == 2 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
-            <div class ='backgroundseg' id = 'BL3'>${decorLeftPos == 3 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div><div class ='backgroundseg' id = 'BR3'>${decorRightPos == 3 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
-            <div class ='backgroundseg' id = 'BL4'>${decorLeftPos == 4 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div><div class ='backgroundseg' id = 'BR4'>${decorRightPos == 4 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
-            <div class ='backgroundseg' id = 'BL5'>${decorLeftPos == 5 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L5'>${carImageL ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='M5'>${carImageM ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='R5'>${carImageR ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class ='backgroundseg' id = 'BR5'>${decorRightPos == 5 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL1'>${decorLeftPos == 1 ? '<img id="treeimage" src="img/tree.png">' : ''}</div><div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div><div class ='backgroundseg' id = 'BR1'>${decorRightPos == 1 ? '<img id="treeimage" src="img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL2'>${decorLeftPos == 2 ? '<img id="treeimage" src="img/tree.png">' : ''}</div><div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div><div class ='backgroundseg' id = 'BR2'>${decorRightPos == 2 ? '<img id="treeimage" src="img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL3'>${decorLeftPos == 3 ? '<img id="treeimage" src="img/tree.png">' : ''}</div><div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div><div class ='backgroundseg' id = 'BR3'>${decorRightPos == 3 ? '<img id="treeimage" src="img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL4'>${decorLeftPos == 4 ? '<img id="treeimage" src="img/tree.png">' : ''}</div><div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div><div class ='backgroundseg' id = 'BR4'>${decorRightPos == 4 ? '<img id="treeimage" src="img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL5'>${decorLeftPos == 5 ? '<img id="treeimage" src="img/tree.png">' : ''}</div><div class='roadseg'id='L5'>${carImageL ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='M5'>${carImageM ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='R5'>${carImageR ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class ='backgroundseg' id = 'BR5'>${decorRightPos == 5 ? '<img id="treeimage" src="img/tree.png">' : ''}</div>
             </div></div>
 
             <div id='controlButtons'>
@@ -164,7 +186,64 @@
         // Posisjon av kompiser //
 
         // Posisjon av dekor //
+/*         dlp1 = obstacleRng();
+        drp1 = obstacleRng();
         
+        if (drp1 == true) {
+            drp5 = false;
+            drp2 = true;
+        }
+        if (drp2 == true) {
+            drp1 = false;
+            drp3 = true;
+        }
+        if (drp3 == true) {
+            drp2 = false;
+            drp4 = true;
+        }
+        if (drp4 == true) {
+            drp3 = false;
+            drp5 = true;
+        }
+        if (drp5 == true) {
+            drp4 = false;
+            
+        }
+        
+        if (dlp1 == true) {
+            dlp5 = false;
+            drp2 = true;
+        }
+        if (dlp2 == true) {
+            dlp1 = false;
+            dlp3 = true;
+        }
+        if (dlp3 == true) {
+            dlp2 = false;
+            dlp4 = true;
+        }
+        if (dlp4 == true) {
+            dlp3 = false;
+            dlp5 = true;
+        }
+        if (dlp5 == true) {
+            dlp4 = false;
+        } */
+        if (decorLeftPos >= -1) {
+            decorLeftPos++;
+        }
+
+        if (decorRightPos >= -1) {
+            decorRightPos++;
+        }
+        
+        if (decorLeftPos == 6) {
+            decorLeftPos = 0;
+        }
+
+        if (decorRightPos == 6) {
+            decorRightPos = 0;
+        }
 
         updateCarView();
     }
