@@ -32,13 +32,14 @@
 <script>
     //m
     let carPos = 0;
-    let FourObstPos;
-    let ThreeObstPos;
-    let TwoObstPos;
-    let OneObstPos;
+    let RowFourPos;
+    let RowThreePos;
+    let RowTwoPos;
+    let RowOnePos;
     let carImage = 'img/roadmid.png';
     let isCarOnLeft = " ";
     let isCarOnRight = " ";
+    let turns = 0;
 
     //v
     function updateView() {
@@ -60,7 +61,6 @@
     }
 
     function moveForw() {
-        carPos = 0;
         nextTurn();
     }
 
@@ -95,11 +95,19 @@
             console.log('drove left');
         }
 
+        turns++;
+        console.log(turns);
         // Posisjon av hindringer //
-
+        if (turns == 10) {
+            obstacleRng
+        }
         // Posisjon av kompiser //
 
         updateView();
+    }
+
+    function obstacleRng() {
+        return Math.random() * (1 - -1) + -1;
     }
 
 </script>
