@@ -24,17 +24,17 @@
             justify-content: center;
         }
 
-        #background {
+/*         #background {
             display: grid;
             grid-template-columns: auto auto;
             justify-content: center;
             background-color: green;
             width: 800px;
-        }
+        } */
 
         #roadDisplay {
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto auto;
             justify-content: center;
         }
 
@@ -45,6 +45,14 @@
             border: 2px black solid;
             border-bottom: 2px rgb(70, 70, 70) solid;
             border-top: 2px rgb(70, 70, 70) solid;
+        }
+
+        .backgroundseg {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            border-bottom: 2px green solid;
+            border-top: 2px green solid;
         }
     </style>
 </head>
@@ -72,11 +80,11 @@
         <div id='roadDisplay'>
             
             
-            <div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div>
-            <div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div>
-            <div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div>
-            <div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div>
-            <div class='roadseg'id='L5'></div><div class='roadseg'id='M5'></div><div class='roadseg'id='R5'></div>
+            <div class ='backgroundseg' id = 'BL1'></div><div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div><div class ='backgroundseg' id = 'BR1'></div>
+            <div class ='backgroundseg' id = 'BL2'></div><div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div><div class ='backgroundseg' id = 'BR2'></div>
+            <div class ='backgroundseg' id = 'BL3'></div><div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div><div class ='backgroundseg' id = 'BR3'></div>
+            <div class ='backgroundseg' id = 'BL4'></div><div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div><div class ='backgroundseg' id = 'BR4'></div>
+            <div class ='backgroundseg' id = 'BL5'></div><div class='roadseg'id='L5'></div><div class='roadseg'id='M5'></div><div class='roadseg'id='R5'></div><div class ='backgroundseg' id = 'BR5'></div>
             </div></div>
 
             <div id='controlButtons'>
