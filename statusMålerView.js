@@ -1,8 +1,8 @@
 
 //View
-updateStatus()
+
 function updateStatus() {
-    app.innerHTML = /*HTML*/ `
+    return `
     <div>
         <div id="statusTextDisplay">${printStatusText()}</div>
     </div>
