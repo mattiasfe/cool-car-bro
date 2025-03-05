@@ -1,31 +1,31 @@
 .containerStatus {
-    display: grid;
-    grid-template-rows: auto auto auto auto auto;
-    
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
 }
 
 .statusLightsOff {
-    background-color: lightgray;
-    border: 2px solid black;
-    height: 50px;
-    width: 50px;
-    margin-left: 40px;
+  background-color: lightgray;
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  margin-left: 40px;
 }
 
 .statusLightsOn {
-    background-color: yellow;
-    border: 2px solid black;
-    height: 50px;
-    width: 50px;
-    margin-left: 40px;
+  background-color: yellow;
+  border: 2px solid black;
+  height: 50px;
+  width: 50px;
+  margin-left: 40px;
 }
 
 #statusTextDisplay {
-    display: flex;
-    justify-content: center;
-    font-size: 2.5em;
-    font-family: cursive;
-    text-decoration: underline;
-    
-
+  display: flex;
+  justify-content: center;
+  font-size: 2.5em;
+  font-family: cursive;
+  text-decoration: underline;
+}
+#timer {
+  height: 20px;
 }
