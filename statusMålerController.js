@@ -38,10 +38,10 @@ function printStatusText() {
                 text = 'Cool Guy 🚗';
             }
             else if (coolScoreNumber == 5) {
-                text = 'Money Man 🏎️';
+                text = 'Stud 🏎️';
             }
             else if (coolScoreNumber == 6) {
-                text = 'Filthy Rich 🏎';
+                text = '💰Legend 🏎';
             }
         }
     }
