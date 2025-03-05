@@ -71,10 +71,12 @@
 <script>
     //m
     let carPos = 0;
-    let RowFourPos;
-    let RowThreePos;
-    let RowTwoPos;
-    let RowOnePos;
+    let decorLeftPos = 0;
+    let decorRightPos = 0;
+    let rowFourPos;
+    let rowThreePos;
+    let rowTwoPos;
+    let rowOnePos;
     let carImageL = false;
     let carImageM = true;
     let carImageR = false;
@@ -88,13 +90,12 @@
         document.getElementById('app').innerHTML = /*HTML*/ `
         <div id='background'>
         <div id='roadDisplay'>
-            
-            
-            <div class ='backgroundseg' id = 'BL1'></div><div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div><div class ='backgroundseg' id = 'BR1'></div>
-            <div class ='backgroundseg' id = 'BL2'></div><div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div><div class ='backgroundseg' id = 'BR2'></div>
-            <div class ='backgroundseg' id = 'BL3'></div><div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div><div class ='backgroundseg' id = 'BR3'></div>
-            <div class ='backgroundseg' id = 'BL4'></div><div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div><div class ='backgroundseg' id = 'BR4'></div>
-            <div class ='backgroundseg' id = 'BL5'></div><div class='roadseg'id='L5'>${carImageL ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='M5'>${carImageM ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='R5'>${carImageR ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class ='backgroundseg' id = 'BR5'></div>
+        
+            <div class ='backgroundseg' id = 'BL1'>${decorLeftPos == 1 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L1'></div><div class='roadseg'id='M1'></div><div class='roadseg'id='R1'></div><div class ='backgroundseg' id = 'BR1'>${decorRightPos == 1 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL2'>${decorLeftPos == 2 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L2'></div><div class='roadseg'id='M2'></div><div class='roadseg'id='R2'></div><div class ='backgroundseg' id = 'BR2'>${decorRightPos == 2 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL3'>${decorLeftPos == 3 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L3'></div><div class='roadseg'id='M3'></div><div class='roadseg'id='R3'></div><div class ='backgroundseg' id = 'BR3'>${decorRightPos == 3 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL4'>${decorLeftPos == 4 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L4'></div><div class='roadseg'id='M4'></div><div class='roadseg'id='R4'></div><div class ='backgroundseg' id = 'BR4'>${decorRightPos == 4 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
+            <div class ='backgroundseg' id = 'BL5'>${decorLeftPos == 5 ? '<img id="treeimage" src"img/tree.png">' : ''}</div><div class='roadseg'id='L5'>${carImageL ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='M5'>${carImageM ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class='roadseg'id='R5'>${carImageR ? '<img id="carimage" src="img/greencar.png">' : ''}</div><div class ='backgroundseg' id = 'BR5'>${decorRightPos == 5 ? '<img id="treeimage" src"img/tree.png">' : ''}</div>
             </div></div>
 
             <div id='controlButtons'>
@@ -162,11 +163,19 @@
         }
         // Posisjon av kompiser //
 
+        // Posisjon av dekor //
+        
+
         updateCarView();
     }
 
     function obstacleRng() {
         return Math.floor(Math.random() * (1 - -2) + -1);
+        //<img src=${carImage}>//
+    }
+
+    function decorRng() {
+        return Math.floor(Math.random() * 2);
         //<img src=${carImage}>//
     }
 
