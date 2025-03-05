@@ -40,6 +40,7 @@
     let isCarOnLeft = " ";
     let isCarOnRight = " ";
     let turns = 0;
+    let obstacleNumber = 0;
 
     //v
     function updateView() {
@@ -99,7 +100,12 @@
         console.log(turns);
         // Posisjon av hindringer //
         if (turns == 10) {
-            obstacleRng
+            RowOnePos = obstacleRng();
+            if(RowOnePos == -0) {
+                RowOnePos = 0
+            }
+            obstacleNumber++;
+            console.log(RowOnePos);
         }
         // Posisjon av kompiser //
 
@@ -107,7 +113,7 @@
     }
 
     function obstacleRng() {
-        return Math.random() * (1 - -1) + -1;
+        return Math.round(Math.random() * (1 - -1) + -1);
     }
 
 </script>
