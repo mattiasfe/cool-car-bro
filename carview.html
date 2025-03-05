@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<body onload = "updateView()">
+<body onload = "updateCarView()">
     <div id="app"></div>
 </body>
 </html>
@@ -43,7 +43,7 @@
     let obstacleNumber = 0;
 
     //v
-    function updateView() {
+    function updateCarView() {
         document.getElementById('app').innerHTML = /*HTML*/ ` 
         <div id='roadDisplay'>
             <img src=${carImage}></div>
@@ -109,7 +109,7 @@
         }
         // Posisjon av kompiser //
 
-        updateView();
+        updateCarView();
     }
 
     function obstacleRng() {
