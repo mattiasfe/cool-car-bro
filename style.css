@@ -1,7 +1,10 @@
 .containerStatus {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
+  position: absolute;
+  z-index: 1;
 }
+
 
 .statusLightsOff {
   background-color: lightgray;
@@ -20,11 +23,14 @@
 }
 
 #statusTextDisplay {
+  position: absolute;
+  z-index: 1;
   display: flex;
   justify-content: center;
   font-size: 2.5em;
   font-family: cursive;
   text-decoration: underline;
+
 }
 #timer {
   height: 20px;
