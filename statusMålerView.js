@@ -9,5 +9,6 @@ function updateStatus() {
         <div class="containerStatus">
             ${getStatusLvl()}
         </div>
+        <button class="btnDisplay" onclick="getPoints()">Get Points</button>
     `;
 }

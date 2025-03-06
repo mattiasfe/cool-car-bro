@@ -48,3 +48,8 @@ function printStatusText() {
     }
     return text;
 }
+
+function getPoints() {
+    coolScoreNumber++;
+    updateMainView();
+}

@@ -1,3 +1,10 @@
+.btnDisplay {
+  display: flex;
+  margin-left: 50px;
+  width: 100px;
+  height: 20px;
+}
+
 .containerStatus {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
