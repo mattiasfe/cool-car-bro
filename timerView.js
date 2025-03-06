@@ -11,7 +11,6 @@ function startTimer() {
     const timer = setInterval(() => {
         updateTheTimer()
         timerWidthValue = timerWidthValue - 0.01;
-        console.log(timerWidthValue)
         if (timerWidthValue <= 0) {
             clearInterval(timer)
             wantToStartTimer = false;
