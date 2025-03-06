@@ -102,7 +102,7 @@ body {
   justify-content: center;
   align-content: center;
   background-color: gray;
-  width: 60px;
+  width: 70px;
   height: 162px;
   border-bottom: 1.5px rgba(70, 70, 70, 0.5) dashed;
   border-top: 1.5px rgba(70, 70, 70, 0.5) dashed;
@@ -134,7 +134,7 @@ body {
 }
 
 #carimage {
-  width:40px;
+  width:60px;
   height:140px;
 }
 
