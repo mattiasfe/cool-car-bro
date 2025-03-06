@@ -1,6 +1,6 @@
 function updateMainView() {
     let html = `
-    ${wantToStartTimer ? `${renderTimerView()}` : ''}
+    ${renderTimerView()}
     ${updateStatus()}
     ${buddyView()}
     ${updateCarView()}
