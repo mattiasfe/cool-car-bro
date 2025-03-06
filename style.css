@@ -29,3 +29,107 @@
 #timer {
   height: 20px;
 }
+
+/* carview */
+
+#controlButtons{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+#miscButtons {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 20px;
+  justify-content: center;
+}
+
+#tootbtn {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(94, 94, 94);
+}
+
+
+#tootbtn:hover {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(138, 138, 138);
+}
+
+#tootbtn {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(94, 94, 94);
+}
+
+#hornimg {
+  width: 50px;
+  height: 50px;
+}
+
+.ctrlbtn {
+  font-size: larger;
+  margin: 10px;
+  width: 75px;
+  height: 40px;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+}
+
+#roadDisplay {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+}
+
+.roadseg {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: gray;
+  width: 100px;
+  height: 202px;
+  border-bottom: 1.5px rgba(70, 70, 70, 0.5) dashed;
+  border-top: 1.5px rgba(70, 70, 70, 0.5) dashed;
+}
+
+#L1,#L2,#L3,#L4,#L5 {
+  border-left: 2px black solid;
+  border-right: 2px white dashed;
+}
+#R1,#R2,#R3,#R4,#R5 {
+  border-right: 2px black solid;
+  border-left: 2px white dashed;
+}
+
+.backgroundseg {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: green;
+  width: 200px;
+  height: 202px;
+  border-bottom: 1.5px green solid;
+  border-top: 1.5px green solid;
+}
+
+#treeimage {
+  width: 100px;
+  height: 180px;
+}
+
+#carimage {
+  width:80px;
+  height:180px;
+}
+
+/* carview */
