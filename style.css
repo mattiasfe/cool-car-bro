@@ -23,8 +23,7 @@
 }
 
 #statusTextDisplay {
-  position: absolute;
-  z-index: 1;
+
   display: flex;
   justify-content: center;
   font-size: 2.5em;
