@@ -72,6 +72,7 @@ function nextTurn() {
     }
 
     updateCarView();
+    updateMainView();
 }
 
 function obstacleRng() {
