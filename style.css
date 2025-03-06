@@ -102,8 +102,8 @@ body {
   justify-content: center;
   align-content: center;
   background-color: gray;
-  width: 100px;
-  height: 202px;
+  width: 80px;
+  height: 182px;
   border-bottom: 1.5px rgba(70, 70, 70, 0.5) dashed;
   border-top: 1.5px rgba(70, 70, 70, 0.5) dashed;
 }
@@ -122,20 +122,20 @@ body {
   justify-content: center;
   align-content: center;
   background-color: green;
-  width: 200px;
-  height: 202px;
+  width: 180px;
+  height: 182px;
   border-bottom: 1.5px green solid;
   border-top: 1.5px green solid;
 }
 
 #treeimage {
-  width: 100px;
-  height: 180px;
+  width: 80px;
+  height: 160px;
 }
 
 #carimage {
-  width:80px;
-  height:180px;
+  width:60px;
+  height:160px;
 }
 
 /* carview */
